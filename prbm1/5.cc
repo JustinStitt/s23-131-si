@@ -7,7 +7,7 @@ int HowFar13(int num) {
 };
 
 int main() {
-  // ... write code here ****THIS FILE HAS BEEN CLAIMED BY HIMOTHY*****
+  // ****THIS FILE HAS BEEN CLAIMED BY HIMOTHY*****
   int number;
   std::cout << "Enter your number: ";
   std::cin >> number;
