@@ -2,7 +2,7 @@
 
 namespace Chess {
   void max(int a, int b) {
-    std::cout << "TO THE MAX\n";
+      std::cout << "TO THE MAX\n";
   }
 }
 
@@ -17,11 +17,8 @@ class Bear {
 
 
 int main() {
-
+  unsigned int your_dad = 69420;
   std::cout << std::max(5, 2) << "\n";
   justin::max(5, 2); // SRO ::
-  // ...
-  // int* a = new int(4);
-  // std::cout << a << " : " << *a << "\n";
   return 0;
 }
