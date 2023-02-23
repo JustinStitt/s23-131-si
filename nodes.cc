@@ -1,13 +1,16 @@
 #include <iostream>
+#include <memory>
 
 struct Node {
   int data;
-  Node *next;
+  // Node *next;
+  std::shared_ptr<Node> next;
 };
 
 class SinglyLinkedList {
 private:
-  Node *head;
+  // Node *head;
+  std::shared_ptr<Node> head;
   size_t size;
 
 public:
@@ -18,10 +21,9 @@ public:
   void clear() {
     if (empty())
       return;
-    Node *curr = head;
+    std::shared_ptr<Node> curr = head;
     while (curr) {
-      Node *next_node = curr->next;
-      delete curr;
+      auto next_node = curr->next;
       curr = next_node;
     }
   }
@@ -29,7 +31,7 @@ public:
   bool exists(int element) {
     if (empty())
       return false;
-    Node *curr = head;
+    auto curr = head;
     while (curr) {
       if (curr->data == element)
         return true;
@@ -41,7 +43,7 @@ public:
 
   void push_front(int element) {
     // make the new node (note: its not connected to anything rn)
-    Node *to_add = new Node{element, nullptr};
+    auto to_add = std::make_shared<Node>(element, nullptr);
     ++size; // added a node, thus increasing our size
     if (empty()) {
       head = to_add;
