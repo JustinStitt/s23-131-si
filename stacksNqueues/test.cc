@@ -2,17 +2,11 @@
 
 using namespace std;
 
-template <typename T> class Stack : std::vector<T> {
-  using vector<T>::vector;
-
-public:
-  Stack() : vector<T>() {}
-  using vector<T>::push_back;
-  using vector<T>::back;
-};
-
 int main() {
-  Stack<int> stk;
-  stk.push_back(4);
+  std::vector<int> vec{7, 8, 1, 4};
+
+  auto it = vec.begin() + 2 - 1 + 1;
+
+  std::cout << a << "\n";
   return 0;
 }
